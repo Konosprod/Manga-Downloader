@@ -34,20 +34,20 @@
             this.expoterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.epubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sitesSupportésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterDesPluginsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aProposToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDownload = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.ajouterDesPluginsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aProposToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.buttonNews = new System.Windows.Forms.Button();
-            this.sitesSupportésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -78,7 +78,7 @@
             // préférencesToolStripMenuItem1
             // 
             this.préférencesToolStripMenuItem1.Name = "préférencesToolStripMenuItem1";
-            this.préférencesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.préférencesToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
             this.préférencesToolStripMenuItem1.Text = "Préférences";
             this.préférencesToolStripMenuItem1.Click += new System.EventHandler(this.préférencesToolStripMenuItem1_Click);
             // 
@@ -88,22 +88,29 @@
             this.pDFToolStripMenuItem,
             this.epubToolStripMenuItem});
             this.expoterToolStripMenuItem.Name = "expoterToolStripMenuItem";
-            this.expoterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.expoterToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.expoterToolStripMenuItem.Text = "Exporter";
             // 
             // pDFToolStripMenuItem
             // 
             this.pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
-            this.pDFToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pDFToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.pDFToolStripMenuItem.Text = "PDF";
             this.pDFToolStripMenuItem.Click += new System.EventHandler(this.pDFToolStripMenuItem_Click);
             // 
             // epubToolStripMenuItem
             // 
             this.epubToolStripMenuItem.Name = "epubToolStripMenuItem";
-            this.epubToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.epubToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.epubToolStripMenuItem.Text = "Epub";
             this.epubToolStripMenuItem.Click += new System.EventHandler(this.epubToolStripMenuItem_Click);
+            // 
+            // sitesSupportésToolStripMenuItem
+            // 
+            this.sitesSupportésToolStripMenuItem.Name = "sitesSupportésToolStripMenuItem";
+            this.sitesSupportésToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.sitesSupportésToolStripMenuItem.Text = "Sites supportés";
+            this.sitesSupportésToolStripMenuItem.Click += new System.EventHandler(this.sitesSupportésToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -121,6 +128,20 @@
             this.aProposToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.aProposToolStripMenuItem.Text = "Vérfier les mises à jours";
             this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
+            // 
+            // ajouterDesPluginsToolStripMenuItem
+            // 
+            this.ajouterDesPluginsToolStripMenuItem.Name = "ajouterDesPluginsToolStripMenuItem";
+            this.ajouterDesPluginsToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.ajouterDesPluginsToolStripMenuItem.Text = "Ajouter des plugins";
+            this.ajouterDesPluginsToolStripMenuItem.Click += new System.EventHandler(this.ajouterDesPluginsToolStripMenuItem_Click);
+            // 
+            // aProposToolStripMenuItem1
+            // 
+            this.aProposToolStripMenuItem1.Name = "aProposToolStripMenuItem1";
+            this.aProposToolStripMenuItem1.Size = new System.Drawing.Size(196, 22);
+            this.aProposToolStripMenuItem1.Text = "A propos";
+            this.aProposToolStripMenuItem1.Click += new System.EventHandler(this.aProposToolStripMenuItem1_Click);
             // 
             // buttonDownload
             // 
@@ -154,6 +175,13 @@
             this.tabPage1.Text = "Télécharger";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(35, 55);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(135, 20);
+            this.textBox1.TabIndex = 2;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.buttonNews);
@@ -168,44 +196,15 @@
             this.tabPage2.Text = "Suivi";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // ajouterDesPluginsToolStripMenuItem
+            // buttonNews
             // 
-            this.ajouterDesPluginsToolStripMenuItem.Name = "ajouterDesPluginsToolStripMenuItem";
-            this.ajouterDesPluginsToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.ajouterDesPluginsToolStripMenuItem.Text = "Ajouter des plugins";
-            this.ajouterDesPluginsToolStripMenuItem.Click += new System.EventHandler(this.ajouterDesPluginsToolStripMenuItem_Click);
-            // 
-            // aProposToolStripMenuItem1
-            // 
-            this.aProposToolStripMenuItem1.Name = "aProposToolStripMenuItem1";
-            this.aProposToolStripMenuItem1.Size = new System.Drawing.Size(196, 22);
-            this.aProposToolStripMenuItem1.Text = "A propos";
-            this.aProposToolStripMenuItem1.Click += new System.EventHandler(this.aProposToolStripMenuItem1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(35, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(6, 6);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(115, 147);
-            this.listBox1.TabIndex = 0;
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Location = new System.Drawing.Point(186, 34);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "Ajouter";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            this.buttonNews.Location = new System.Drawing.Point(186, 92);
+            this.buttonNews.Name = "buttonNews";
+            this.buttonNews.Size = new System.Drawing.Size(75, 23);
+            this.buttonNews.TabIndex = 3;
+            this.buttonNews.Text = "Nouveaux";
+            this.buttonNews.UseVisualStyleBackColor = true;
+            this.buttonNews.Click += new System.EventHandler(this.buttonNews_Click);
             // 
             // buttonDelete
             // 
@@ -217,21 +216,23 @@
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // buttonNews
+            // buttonAdd
             // 
-            this.buttonNews.Location = new System.Drawing.Point(186, 92);
-            this.buttonNews.Name = "buttonNews";
-            this.buttonNews.Size = new System.Drawing.Size(75, 23);
-            this.buttonNews.TabIndex = 3;
-            this.buttonNews.Text = "Nouveaux";
-            this.buttonNews.UseVisualStyleBackColor = true;
+            this.buttonAdd.Location = new System.Drawing.Point(186, 34);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 1;
+            this.buttonAdd.Text = "Ajouter";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // sitesSupportésToolStripMenuItem
+            // listBox1
             // 
-            this.sitesSupportésToolStripMenuItem.Name = "sitesSupportésToolStripMenuItem";
-            this.sitesSupportésToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.sitesSupportésToolStripMenuItem.Text = "Sites supportés";
-            this.sitesSupportésToolStripMenuItem.Click += new System.EventHandler(this.sitesSupportésToolStripMenuItem_Click);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(6, 6);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(115, 147);
+            this.listBox1.TabIndex = 0;
             // 
             // MainWindow
             // 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QAD;
 
 // TODO : Finish the interface
 
@@ -14,13 +15,21 @@ namespace MangaDownloader
 {
     public partial class MainWindow : Form
     {
+        private List<String> newChapters;
+
         public MainWindow()
         {
             InitializeComponent();
             Config.loadConfig();
 
+            newChapters = new List<String>();
+
             if(this.listBox1.Items.Count > 0)
                 this.listBox1.SetSelected(0, true);
+
+            newChapters.Add("blah");
+            newChapters.Add("bloh");
+            newChapters.Add("blih");
         }
 
         private void buttonDownload_Click(object sender, EventArgs e)
@@ -95,6 +104,20 @@ namespace MangaDownloader
         private void sitesSupportésToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonNews_Click(object sender, EventArgs e)
+        {
+            LogWindow logWindow = new LogWindow();
+
+            logWindow.setList(newChapters);
+
+            logWindow.ShowDialog();
+
+            if(logWindow.Viewed)
+            {
+                newChapters.Clear();
+            }
         }
     }
 }
