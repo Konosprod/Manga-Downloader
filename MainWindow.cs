@@ -32,6 +32,12 @@ namespace MangaDownloader
             newChapters.Add("blih");
         }
 
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            Config.saveConfig();
+        }
+
         private void buttonDownload_Click(object sender, EventArgs e)
         {
 

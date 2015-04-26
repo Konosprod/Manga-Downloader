@@ -1,78 +1,119 @@
 ﻿using System;
+using System.Xml;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 // TODO : Create config components & implements getter/setter
 
 namespace MangaDownloader
 {
-    public static class Config
+    public class Config
     {
+        private static Dictionary<String, String> values;
+
+
         public static void loadConfig()
         {
+            values = new Dictionary<String, String>();
 
+            values.Clear();
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load("config.xml");
+
+            XmlNode node = doc.DocumentElement.SelectSingleNode("/config");
+
+            values["filenameScheme"] = node.SelectSingleNode("filenameScheme").InnerText;
+            values["savePath"] = node.SelectSingleNode("savePath").InnerText;
+            values["saveOutput"] = node.SelectSingleNode("saveOutput").InnerText;
+            values["useFileOutput"] = node.SelectSingleNode("useFileOutput").InnerText;
+            values["pathScheme"] = node.SelectSingleNode("pathScheme").InnerText;
+            values["version"] = node.SelectSingleNode("version").InnerText;
+            values["timeInterval"] = node.SelectSingleNode("timeInterval").InnerText;
+        }
+
+        public static void saveConfig()
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load("config.xml");
+
+            XmlNode node = doc.DocumentElement.SelectSingleNode("/config");
+
+            foreach(String key in values.Keys)
+            {
+                node.SelectSingleNode(key).InnerText = values[key];
+            }
+
+            doc.Save("config.xml");
         }
 
         public static void setSavePath(String path)
         {
-
+            values["savePath"] = path;
         }
 
         public static String getFilenameScheme()
         {
-            return "%page%";
+            return values["filenameScheme"];
         }
 
         public static void setFilenameScheme(String scheme)
         {
-
+            values["filenameScheme"] = scheme;
         }
 
         public static String getSaveOutput()
         {
-            return "new.txt";
+            return values["saveOutput"];
         }
 
         public static void setSaveOutput(String path)
         {
-
+            if (path != "")
+                values["saveOutput"] = path;
+            else
+                values["saveOutput"] = "news.txt";
         }
 
         public static Boolean getUseFileOutput()
         {
-            return false;
+            return (values["useFileOutput"] == "True") ? true : false;
         }
 
         public static void setUseFileOutput(Boolean use)
         {
-
+            if(use)
+                values["useFileOutput"] = "True";
+            else
+                values["useFileOutput"] = "False";
         }
 
         public static String getSavePath()
         {
-            return "C:\\Users\\kono\\Desktop\\";
+            return values["savePath"];
         }
 
         public static String getPathScheme()
         {
-            return "%name%/%chapter%/";
-        }
-
-        public static void resetSavePath()
-        {
-
+            return values["pathScheme"];
         }
 
         public static String getVersion()
         {
-            return "1.0.0";
+            return values["version"];
         }
 
         public static String getLicence()
         {
-            return "GPL v2";
+            try
+            {
+                string[] lines = System.IO.File.ReadAllLines("LICENSE");
+
+                return String.Join("\n", lines);
+            }
+            catch(Exception e)
+            {
+                return "GPL V2";
+            }
         }
 
 
@@ -88,12 +129,12 @@ namespace MangaDownloader
 
         public static int getTimeInterval()
         {
-            return 3600;
+            return int.Parse(values["timeInterval"]);
         }
 
         public static void setTimeInterval(int value)
         {
-
+            values["timeInterval"] = value.ToString();
         }
 
     }

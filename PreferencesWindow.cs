@@ -37,8 +37,11 @@ namespace MangaDownloader
 
             if (this.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
-                //TODO : Save Preferences
-
+                Config.setFilenameScheme(this.textBoxFilenameScheme.Text);
+                Config.setSaveOutput(this.saveFileDialog1.FileName);
+                Config.setSavePath(this.textBoxOutputDirectory.Text);
+                Config.setTimeInterval((int)this.timeIntervalSelector.Value);
+                Config.setUseFileOutput(this.checkBoxUseFileOutput.Checked);
             }
         }
 
@@ -52,12 +55,7 @@ namespace MangaDownloader
         {
             if(this.folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                Config.setSavePath(this.folderBrowserDialog1.SelectedPath);
                 this.textBoxOutputDirectory.Text = this.folderBrowserDialog1.SelectedPath;
-            }
-            else
-            {
-                Config.resetSavePath();
             }
         }
 
@@ -87,7 +85,6 @@ namespace MangaDownloader
             if(this.saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 this.textBoxSaveOutput.Text = this.saveFileDialog1.FileName;
-                Config.setSaveOutput(this.saveFileDialog1.FileName);
             }
         }
     }

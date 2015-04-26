@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <filenameScheme>C%chapter%_P%page%</filenameScheme>
+  <savePath>Mangas/</savePath>
+  <saveOutput>news.txt</saveOutput>
+  <useFileOutput>False</useFileOutput>
+  <pathScheme>%name%/%chapter%/</pathScheme>
+  <timeInterval>3600</timeInterval>
+  <version>1.0</version>
+</config>
