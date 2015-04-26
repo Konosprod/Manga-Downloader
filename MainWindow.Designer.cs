@@ -141,7 +141,7 @@
             this.aProposToolStripMenuItem1.Name = "aProposToolStripMenuItem1";
             this.aProposToolStripMenuItem1.Size = new System.Drawing.Size(196, 22);
             this.aProposToolStripMenuItem1.Text = "A propos";
-            this.aProposToolStripMenuItem1.Click += new System.EventHandler(this.aProposToolStripMenuItem1_Click);
+            this.aProposToolStripMenuItem1.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
             // 
             // buttonDownload
             // 

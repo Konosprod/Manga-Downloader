@@ -16,6 +16,7 @@ namespace MangaDownloader
     public partial class MainWindow : Form
     {
         private List<String> newChapters;
+        private List<MangaPlugin> plugins;
 
         public MainWindow()
         {
@@ -27,9 +28,9 @@ namespace MangaDownloader
             if(this.listBox1.Items.Count > 0)
                 this.listBox1.SetSelected(0, true);
 
-            newChapters.Add("blah");
-            newChapters.Add("bloh");
-            newChapters.Add("blih");
+            PluginLoader pluginLoader = new PluginLoader();
+
+            plugins = pluginLoader.loadPlugins("Plugins/").ToList();
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -60,17 +61,12 @@ namespace MangaDownloader
 
         }
 
-        private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ajouterDesPluginsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void aProposToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AProposWindow aProposWindow = new AProposWindow();
 
@@ -109,7 +105,9 @@ namespace MangaDownloader
 
         private void sitesSupportésToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ListPluginWindow listPluginWindow = new ListPluginWindow(plugins);
 
+            listPluginWindow.ShowDialog();
         }
 
         private void buttonNews_Click(object sender, EventArgs e)
