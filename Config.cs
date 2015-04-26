@@ -20,15 +20,12 @@ namespace MangaDownloader
             XmlDocument doc = new XmlDocument();
             doc.Load("config.xml");
 
-            XmlNode node = doc.DocumentElement.SelectSingleNode("/config");
+            XmlNode config = doc.DocumentElement.SelectSingleNode("/config");
 
-            values["filenameScheme"] = node.SelectSingleNode("filenameScheme").InnerText;
-            values["savePath"] = node.SelectSingleNode("savePath").InnerText;
-            values["saveOutput"] = node.SelectSingleNode("saveOutput").InnerText;
-            values["useFileOutput"] = node.SelectSingleNode("useFileOutput").InnerText;
-            values["pathScheme"] = node.SelectSingleNode("pathScheme").InnerText;
-            values["version"] = node.SelectSingleNode("version").InnerText;
-            values["timeInterval"] = node.SelectSingleNode("timeInterval").InnerText;
+            foreach(XmlNode node in config.ChildNodes)
+            {
+                values[node.Name] = node.InnerText;
+            }
         }
 
         public static void saveConfig()
