@@ -53,17 +53,25 @@ namespace MangaDownloader
 
         private void pDFToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ExportWindow exportWindow = new ExportWindow();
+            exportWindow.exportType = ExportType.PDF;
 
+            exportWindow.ShowDialog();
         }
 
         private void epubToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ExportWindow exportWindow = new ExportWindow();
+            exportWindow.exportType = ExportType.EPUB;
 
+            exportWindow.ShowDialog();
         }
 
         private void ajouterDesPluginsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            AddPluginWindow addPluginWindow = new AddPluginWindow();
 
+            addPluginWindow.ShowDialog();
         }
 
         private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
@@ -75,7 +83,7 @@ namespace MangaDownloader
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            AddWindow addWindow = new AddWindow();
+            AddMangaWindow addWindow = new AddMangaWindow();
 
             if(addWindow.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -122,6 +130,11 @@ namespace MangaDownloader
             {
                 newChapters.Clear();
             }
+        }
+
+        private void updatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Vérifier les mises à jour");
         }
     }
 }

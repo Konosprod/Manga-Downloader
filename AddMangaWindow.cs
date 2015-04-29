@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace MangaDownloader
 {
-    public partial class AddWindow : Form
+    public partial class AddMangaWindow : Form
     {
         public String UrlFeed;
         public String UrlManga;
         public String MangaName;
 
-        public AddWindow()
+        public AddMangaWindow()
         {
             InitializeComponent();
         }

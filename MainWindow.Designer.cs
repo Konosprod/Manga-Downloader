@@ -36,7 +36,7 @@
             this.epubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sitesSupportésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterDesPluginsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDownload = new System.Windows.Forms.Button();
@@ -115,19 +115,19 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aProposToolStripMenuItem,
+            this.updatesToolStripMenuItem,
             this.ajouterDesPluginsToolStripMenuItem,
             this.aProposToolStripMenuItem1});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
             this.toolStripMenuItem1.Text = "?";
             // 
-            // aProposToolStripMenuItem
+            // updatesToolStripMenuItem
             // 
-            this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.aProposToolStripMenuItem.Text = "Vérfier les mises à jours";
-            this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
+            this.updatesToolStripMenuItem.Name = "updatesToolStripMenuItem";
+            this.updatesToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.updatesToolStripMenuItem.Text = "Vérfier les mises à jours";
+            this.updatesToolStripMenuItem.Click += new System.EventHandler(this.updatesToolStripMenuItem_Click);
             // 
             // ajouterDesPluginsToolStripMenuItem
             // 
@@ -265,7 +265,7 @@
         private System.Windows.Forms.ToolStripMenuItem pDFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem epubToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updatesToolStripMenuItem;
         private System.Windows.Forms.Button buttonDownload;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;

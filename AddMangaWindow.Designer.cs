@@ -1,6 +1,6 @@
 ﻿namespace MangaDownloader
 {
-    partial class AddWindow
+    partial class AddMangaWindow
     {
         /// <summary>
         /// Required designer variable.
