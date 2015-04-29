@@ -2,8 +2,6 @@
 using System.Xml;
 using System.Collections.Generic;
 
-// TODO : Create config components & implements getter/setter
-
 namespace MangaDownloader
 {
     public class Config
